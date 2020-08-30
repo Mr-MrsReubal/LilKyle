@@ -1,0 +1,302 @@
+<html>
+<head>
+	<link rel="shortcut icon" type="image/png" href="assets/icon.png">
+	<meta charset="utf-8">
+     <title>Reubal Beats Production</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style type="text/css">
+	*{
+		margin: 0;
+		padding: 0;
+		list-style-type: none;
+		text-decoration: none;
+		font-family: century gothic;
+		color: white;
+		scroll-behavior: smooth;
+	}
+	nav{
+		height: 80px;
+		background: transparent;
+	}
+	nav img{
+        width:150px;
+        position: absolute;
+        top: 17px;
+        left: 12%;
+	}
+	nav ul{
+		float: right;
+		margin-right: 25px;
+	}
+	nav ul li{
+		display: inline-block;
+		line-height: 80px;
+		margin: 0 15px;
+	}
+	nav ul li a{
+		position: relative;
+		font-size: 18px;
+		text-transform: uppercase;
+		padding: 5px 0;
+	}
+	nav ul li a:before{
+		position: absolute;
+		content: '';
+		left: 0;
+		bottom: 0;
+		height: 3px;
+		width:100%;
+		background: white;
+		transform: scaleX(0);
+		transform-origin: right;
+		transition: transform .4s linear;
+	}	
+	nav ul li a:hover:before{
+		transform: scaleX(1);
+		transform-origin: left;
+        
+	}	
+	label #btn, label #cancel{
+        color:white;
+        font-size: 30px;
+        float: right;
+        line-height: 80px;
+        margin-right: 40px;
+        cursor: pointer;
+        display: none;
+    }
+    #check{
+    	display: none;
+    }
+    @media(max-width: 1118px){
+    	nav img{
+    		left: 8%;
+    	}
+    }
+    @media(max-width: 944px){
+    	nav img{
+    		left: 6%;
+    		top:20px;
+    		width:130px;
+    	}
+    	nav ul li a{
+    		font-size: 17px;
+    	}
+    }
+    @media(max-width: 860px){
+    	label #btn{
+    		display: block;
+    	}
+    	ul{
+    		position: fixed;
+    		width:100%;
+    		height: 100vh;
+    		background: transparent;
+    		top: 80px;
+    		left:-100%;
+    		text-align: center;
+    		transition: all .5s;
+    	}
+    	nav ul li{
+    		display: block;
+    		margin: 50px 0;
+    		line-height: 30px;
+    	}
+    	nav ul li a{
+    		font-size: 20px;
+    	}
+    	#check:checked ~ ul{
+            left:0;
+    	}
+    	#check:checked ~ label #btn{
+            display: none;
+    	}
+    	#check:checked ~ label #cancel{
+            display: block;
+    	}
+    }
+    section{
+    	position: relative;
+    	display: flex;
+    	justify-content: space-between;
+    	align-items: center;
+    	min-height: 100vh;
+    	padding: 150px 100px 100px;
+    }
+    section img{
+        max-width: 350px;
+        margin-left: 20px;
+    }
+    section h1{
+    	font-size: 2.5em;
+    	text-transform: uppercase;
+    }
+    section p{
+    	font-size: 18px;
+    }
+    section:nth-child(odd){
+    	position: relative;
+    	justify-content: center;
+    	align-items: center;
+    	background: #111;
+    	color: #fff;
+    }
+	body
+	{
+		background-image: url("images/image1.jpg");
+		height: 100vh;
+		background-size:cover;
+		background-position: center; 
+		background-attachment: fixed;
+	}
+	button{
+		color: black;
+	}
+</style>	
+</head>
+<body>
+		<nav>	
+			<input type="checkbox" id="check">
+			<label for="check">
+				<i class="fas fa-bars" id="btn"></i>
+				<i class="fas fa-times" id="cancel"></i>
+			</label>
+			<img src="assets/logo.png">
+		<ul>
+			<li><a href="#home"></a>Home</li>
+			<li><a href="#videos"></a>Videos</li>
+			<li><a href="#events"></a>Events</li>
+			<li><a href="#contact"></a>Contact</li>
+			<li><a href="#about"></a>About</li>
+		</ul>
+		</nav>
+		<section id="home">
+			<div>
+				<h1>Welcome Ravers!</h1>
+				<p>People ask me how I make music. I tell them I just step into it. It’s like stepping into a river and joining the flow. Every moment in the river has its song.</p>
+			</div>
+			<img src="images/Me.png">
+		</section>
+		<section id="videos">
+			<div>
+				<h1>Videos</h1>
+
+                <button onclick="makeBig()">Big</button>
+                <button onclick="makeSmall()">Small</button>
+                <button onclick="makeNormal()">Normal</button>
+
+                <br><br>
+
+                <video id="video1" width="420" controls="">
+                <source src="videos/bandicam 2020-08-18 08-27-31-912.mp4" type="video/mp4">
+                </video>
+                <p>Blackpink - HYLT(Lil Kyle Remix)</p>
+
+                <br><br>
+
+                <button onclick="makeBig1()">Big</button>
+                <button onclick="makeSmall1()">Small</button>
+                <button onclick="makeNormal1()">Normal</button>
+
+                <br><br>
+
+                <video id="video2" width="420" controls="">
+                <source src="videos/bandicam 2020-08-18 09-52-19-082.mp4" type="video/mp4">
+                </video>
+                <p>Twice - More & More(Lil Kyle Remake)</p>
+
+                <br><br>
+
+                <button onclick="makeBig2()">Big</button>
+                <button onclick="makeSmall2()">Small</button>
+                <button onclick="makeNormal2()">Normal</button>
+
+                <br><br>
+
+                <video id="video3" width="420" controls="">
+                <source src="videos/bandicam 2020-08-18 11-45-28-638.mp4" type="video/mp4">
+                </video>
+                <p>Blackpink - Whistle(Lil Kyle Remake)</p>
+			</div>
+		</section>
+		<section id="events">
+			<div>
+				<h1>Events</h1>
+				<h1><p>Due to the pandemic &#9760;&#9760;&#9760;, all music festival are Cancelled. Kindly refer to the following sites if you wish to be updated of the events.<a href="">Ultramusicfest</a><br><a href="">Tomorrowland</a></p></h1>
+			</div>
+		</section>
+		<section id="contact">
+			<div>
+				
+				<h1>Contact</h1>
+				<h1>&#9993;<p>ntech1234567890@gmail.com</p></h1>
+				<h1><a href="" class="fa fa-instagram"></a><p>ky.le6419</p></h1>
+				<h1><a href="" class="fa fa-facebook"></a><p>Kylereubal</p></h1>
+				<h1><a href="" class="fa fa-twitter"></a><p>@reubal_kyle</p></h1>
+				
+			</div>
+		</section>
+		<section id="about">
+			<div>
+				<h1>About</h1>
+				<p>Welcome to Reubal Beat Production, your number one source of wild music entertainment. We're dedicated to giving you the very best of music genres, with a focus on your music taste.
+Founded in 2019 by Mr.John Doe, Reubal Beat Production has come a long way from its beginnings in Antwerp Belgium. When Mr. Doe first started out, his passion for music drove him to search for more unique music genres so that Reubal Beat Production can offer you the best Music genres. We now serve customers all over the world, and are thrilled that we're able to turn our passion into our own website.
+We hope you enjoy our products as much as we enjoy offering them to you. If you have any questions or comments, please don't hesitate to contact us.
+
+
+Sincerely,
+
+Mr.John Doe</p>
+			</div>
+		</section>
+</body>
+<script type="text/javascript">
+	
+	var myVideo = document.getElementById("video1"); 
+    var myVideo2 = document.getElementById("video2");
+    var myVideo3 = document.getElementById("video3"); 
+
+
+function makeBig() { 
+    myVideo.width = 560; 
+} 
+
+function makeSmall() { 
+    myVideo.width = 320; 
+} 
+
+function makeNormal() { 
+    myVideo.width = 420; 
+} 
+
+
+function makeBig1() { 
+    myVideo2.width = 560; 
+} 
+
+function makeSmall1() { 
+    myVideo2.width = 320; 
+} 
+
+function makeNormal1() { 
+    myVideo2.width = 420; 
+} 
+
+
+function makeBig2() { 
+    myVideo3.width = 560; 
+} 
+
+function makeSmall2() { 
+    myVideo3.width = 320; 
+} 
+
+function makeNormal2() { 
+    myVideo3.width = 420; 
+} 
+
+</script>
+</html>
